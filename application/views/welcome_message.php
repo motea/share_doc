@@ -4,6 +4,9 @@
 	<meta charset="utf-8">
 	<title>Welcome to CodeIgniter</title>
 
+	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
+
+
 	<style type="text/css">
 
 	::selection{ background-color: #E13300; color: white; }
@@ -84,5 +87,8 @@
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
 </div>
 
+
+<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

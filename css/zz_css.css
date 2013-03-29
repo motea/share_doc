@@ -1,0 +1,20 @@
+#zz-contain-recommend{
+    width: 50%;
+    height: 250px;
+    float: left;
+}
+
+#zz-contain-login{
+    width: auto;
+    float: left;
+}
+
+#zz-first-line{
+    width: auto;
+    height: auto;
+}
+
+.zz-line{
+    width: auto;
+    height: auto;
+}

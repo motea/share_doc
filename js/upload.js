@@ -6,8 +6,8 @@ $(function () {
         dataType: 'json',
         //accept_file_types: /(\.|\/)(gif|jpe?g|png)$/i,这句没用？！
     	//autoUpload: false,
-    	maxFileSize:20000000,
-    	
+    	//maxFileSize:20000000,
+    	maxFileSize: 5000000, // 5 MB
         done: function (e, data) {
             $.each(data.result.files, function (index, file) {
                 $('#input_title').val(file.name);
@@ -19,7 +19,7 @@ $(function () {
             $('#file_info').show();
             
             $("#want_hide").hide();
-            
+            alert(data.result.files[0].name);
             
         },
         

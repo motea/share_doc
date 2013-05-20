@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<title>Welcome to CodeIgniter</title>
 
-	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/zz_css.css">
+	<link rel="stylesheet" type="text/css" href="/share_doc/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/share_doc/css/zz_css.css">
 </head>
 <body>
 	<div class="navbar">
@@ -32,28 +32,9 @@
 
 
 			<div id="zz-contain-login" >
-				<form class="form-horizontal">
-    				<div class="control-group">
-    					<label class="control-label" for="inputEmail">Email</label>
-    					<div class="controls">
-      						<input type="text" id="inputEmail" placeholder="Email">
-    					</div>
-  					</div>
-	  				<div class="control-group">
-					    <label class="control-label" for="inputPassword">Password</label>
-				    	<div class="controls">
-      						<input type="password" id="inputPassword" placeholder="Password">
-				    	</div>
-				    </div>
-  					<div class="control-group">
-    					<div class="controls">
-					    <label class="checkbox">
-				        	<input type="checkbox"> 记住我
-					    </label>
-			      			<button type="submit" class="btn">登陆</button>
-    					</div>
-  					</div>
-				</form>
+				<?php
+					include 'login.php';
+				?>
 			</div>
 		</div>
 
@@ -66,7 +47,7 @@
 	</div>
 
 	
-	<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/share_doc/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/share_doc/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

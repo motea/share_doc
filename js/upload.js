@@ -4,19 +4,22 @@ $(function () {
 	
     $('#fileupload').fileupload({
         dataType: 'json',
-        acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+        //accept_file_types: /(\.|\/)(gif|jpe?g|png)$/i,这句没用？！
     	//autoUpload: false,
     	maxFileSize:20000000,
     	
         done: function (e, data) {
             $.each(data.result.files, function (index, file) {
                 $('#input_title').val(file.name);
-                
+                if(file.error != null){
+                	alert(file.error);	
+                }            	
             });
             
             $('#file_info').show();
             
             $("#want_hide").hide();
+            
             
         },
         

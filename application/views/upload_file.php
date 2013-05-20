@@ -43,16 +43,34 @@
 				</form>
 			</div>
 		</div>
+		<p id="if_success"></p>
 
 		<div id="footer"></div>
 
 
 
-		<script src="/share_doc/js/jquery-1.9.1.min.js"></script>
-		<script src="/share_doc/js/vendor/jquery.ui.widget.js"></script>
-		<script src="/share_doc/js/jquery.iframe-transport.js"></script>
-		<script src="/share_doc/js/jquery.fileupload.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+<script src="/share_doc/js/vendor/jquery.ui.widget.js"></script>
+<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+<script src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js"></script>
+<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+<script src="http://blueimp.github.com/JavaScript-Canvas-to-Blob/canvas-to-blob.min.js"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="/share_doc/js/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="/share_doc/js/jquery.fileupload.js"></script>
+<!-- The File Upload processing plugin -->
+<script src="/share_doc/js/jquery.fileupload-process.js"></script>
+<!-- The File Upload image resize plugin -->
+<script src="/share_doc/js/jquery.fileupload-resize.js"></script>
+<!-- The File Upload validation plugin -->
+<script src="/share_doc/js/jquery.fileupload-validate.js"></script>
+
+
+
 		<script src="/share_doc/js/upload.js"></script>
+
 
 	</body>
 </html>

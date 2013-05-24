@@ -59,6 +59,7 @@
 								<option>外语</option>
 								<option>经贸</option>
 							</select>
+							<label>学科：</label>
 							<select id="select_subject">
 								<option>xx</option>
 							</select>

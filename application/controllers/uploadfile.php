@@ -15,10 +15,19 @@ class UploadFile extends CI_Controller {
 	}
 	
 	public function upload(){
-		$filename = $_POST['title'];
-		if(rename("./server/php/files/{$filename}", "./server/{$filename}")){
-			echo "success";
-		};
+		
+		$file_title = $_POST['file_title'];
+		$select_college = $_POST['college'];
+		$select_subject = $_POST['subject'];
+		$file_describe = $_POST['file_describe'];
+		
+		echo $file_title;
+		echo "<br/>";
+		echo $file_describe;
+		echo "<br/>";
+		echo $select_college;
+		echo "<br/>";
+		echo "{$select_subject}";
 		
 	}
 }

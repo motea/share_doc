@@ -29,7 +29,7 @@
 			<!-- 主体部分放上传文件的表单，右侧放好友列表-->
 			<div  style="width:600px ;float: left">
 				
-				<div class="upload_button" style="width:150px;height: 20px;float:left;">
+				<div id="upload_button" style="width:150px;height: 20px;float:left;">
 					<span class="btn btn-success fileinput-button"> <i class="icon-plus icon-white"></i> <span>上传文件</span> <!-- The file input field used as target for the file upload widget -->
 						<input id="fileupload" type="file" name="files[]" data-url="/share_doc/server/php/" multiple>
 					</span>
@@ -50,23 +50,23 @@
 								文件信息（请认真填写！）
 							</legend>
 							<label>文件标题：</label>
-							<input type="text" placeholder="取个好点的，吸引目光" style="height: 30px">
+							<input type="text" placeholder="取个好点的，吸引目光" style="height: 30px" name="file_title">
 							<label>学院：</label>
 							<span class="help-block">这个不会被记录数据库，只是方便筛选学科</span>
-							<select id="select_college">
-								<option>计算机</option>
-								<option>理学</option>
-								<option>外语</option>
-								<option>经贸</option>
+							<select id="select_college" name="college">
+								<option value="college_of_computer_science">计算机</option>
+								<option value="college_of_science">理学</option>
+								<option value="college_of_foreign_language">外语</option>
+								<option value="business_and_economics">经贸</option>
 							</select>
 							<label>学科：</label>
-							<select id="select_subject">
-								<option>xx</option>
+							<select id="select_subject" name="subject">
+								<option value="xx">xx</option>
 							</select>
 							
 							<textarea name="file_describe" id="myEditor">……</textarea>
-							
-							<button type="submit" class="btn">
+							<input type="hidden" id="file_realname" name="file_realname" value="" />
+							<button type="submit" class="btn" id="file_submit">
 								完成
 							</button>
 						</fieldset>

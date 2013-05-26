@@ -26,6 +26,10 @@
 		</div>
 		
 		<div class="container" >
+			<div class="alert">
+  				<button type="button" class="close" data-dismiss="alert">&times;</button>
+  				<?php echo validation_errors(); ?>
+			</div>
 			<!-- 主体部分放上传文件的表单，右侧放好友列表-->
 			<div  style="width:600px ;float: left">
 				
@@ -50,10 +54,10 @@
 								文件信息（请认真填写！）
 							</legend>
 							<label>文件标题：</label>
-							<input type="text" placeholder="取个好点的，吸引目光" style="height: 30px" name="file_title">
+							<input type="text" placeholder="取个好点的，吸引目光" style="height: 30px" name="file_title" value="<?php echo set_value('file_title')?>">
 							<label>学院：</label>
 							<span class="help-block">这个不会被记录数据库，只是方便筛选学科</span>
-							<select id="select_college" name="college">
+							<select id="select_college" name="college" >
 								<option value="college_of_computer_science">计算机</option>
 								<option value="college_of_science">理学</option>
 								<option value="college_of_foreign_language">外语</option>
@@ -61,7 +65,8 @@
 							</select>
 							<label>学科：</label>
 							<select id="select_subject" name="subject">
-								
+								<option value="ccs_java">Java程序设计</option>
+								<option value="css_javaweb">javaweb</option>
 							</select>
 							
 							<textarea name="file_describe" id="myEditor">……</textarea>

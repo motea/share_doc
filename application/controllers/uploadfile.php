@@ -20,6 +20,7 @@ class UploadFile extends CI_Controller {
 		$select_college = $_POST['college'];
 		$select_subject = $_POST['subject'];
 		$file_describe = $_POST['file_describe'];
+		$file_realname = $_POST['file_realname'];
 		
 		echo $file_title;
 		echo "<br/>";
@@ -28,6 +29,7 @@ class UploadFile extends CI_Controller {
 		echo $select_college;
 		echo "<br/>";
 		echo "{$select_subject}";
+		echo $file_realname;
 		
 	}
 }

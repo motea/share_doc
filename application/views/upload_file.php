@@ -61,7 +61,7 @@
 							</select>
 							<label>学科：</label>
 							<select id="select_subject" name="subject">
-								<option value="xx">xx</option>
+								
 							</select>
 							
 							<textarea name="file_describe" id="myEditor">……</textarea>

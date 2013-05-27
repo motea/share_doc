@@ -35,7 +35,7 @@ class UploadFile extends CI_Controller {
 			$file_describe = $_POST['file_describe'];
 			$file_realname = $_POST['file_realname'];
 			
-			$file_tmp = split('\.', $file_realname);
+			$file_tmp = preg_split("/[.]+/", $file_realname);
 			$file_type = $file_tmp[count($file_tmp)-1];
 			var_dump($file_realname);
 			var_dump($file_tmp);

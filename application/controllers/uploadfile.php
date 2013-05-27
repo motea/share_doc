@@ -37,17 +37,20 @@ class UploadFile extends CI_Controller {
 			
 			$file_tmp = split('\.', $file_realname);
 			$file_type = $file_tmp[count($file_tmp)-1];
-			$base_path = "/share_doc/server/php/"; 
+			var_dump($file_realname);
+			var_dump($file_tmp);
 			
-			$file_hash = sha1_file("/share_doc/server/php/files/{$file_realname}");
+			$temp_file_dir = 'server/php/files/';
+			
+			$file_hash = sha1_file($temp_file_dir.$file_realname);
 			
 			if ($file_hash == '') {
 				echo 'hash 过程出错';//到时候把错误信息传给一个error_view
 			} else {
-				//这里开始移动文件
-				$file_path = "";
-				if (rename($oldname, $newname)) {
-					
+				//这里开始移动文件,文件名用hash+filetype值来取代，哈希值一样的情况下，只会保存一个文件。
+				
+				if (rename($temp_file_dir.$file_realname, "files/{$file_hash}.{$file_type}")) {
+					echo "文件移动成功";
 				} else {
 					
 				}

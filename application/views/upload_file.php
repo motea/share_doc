@@ -69,7 +69,7 @@
 								<option value="css_javaweb">javaweb</option>
 							</select>
 							
-							<textarea name="file_describe" id="myEditor">……</textarea>
+							<textarea name="file_description" id="myEditor">……</textarea>
 							<input type="hidden" id="file_realname" name="file_realname" value="" />
 							<button type="submit" class="btn" id="file_submit">
 								完成

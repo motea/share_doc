@@ -53,18 +53,22 @@ class UploadFile extends CI_Controller {
 				
 				if(rename($temp_file_dir.$file_realname, "files/{$file_hash}.{$file_type}")) {
 					//echo "文件移动成功";
-					$file_data  = array(
+					$file_data_array  = array(
 					'file_name' => $file_realname,
 					'file_hash' => $file_hash,
 					'file_type' => $file_type,
 					'file_description' => $file_description,
 					'file_uploader_id' => "201126630526",//这个还要通过前面获取，先暂时用我的学号了
 					'file_uploaded_date' => date("Y-m-d"),
-					'file_status' => 0
+					'file_status' => 0,
+					'file_like' => 0,
+					'file_hate' => 0,
+					'file_down_count' => 0,
+					'file_tags' => array($select_subject)//这个以后改
 					);
-					var_dump($file_data);
+					//var_dump($file_data_array->file_name);
 					
-					$this->insert_file_data($file_data);
+					$this->insert_file_data($file_data_array);
 					
 				}else{
 					
@@ -79,7 +83,17 @@ class UploadFile extends CI_Controller {
 		
 	}
 
-	protected function insert_file_data($data){
+	protected function insert_file_data($file_data_array){
+		
+		$this->load->library('uploadedfile',$file_data_array);
+		
+		$file = new UploadedFile($file_data_array);
+		
+		//var_dump($file);
+		$this->load->model('File_data_model');
+		$this->File_data_model->insert_file($file);
+		
 		
 	}
+	
 }
